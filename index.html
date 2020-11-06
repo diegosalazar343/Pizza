@@ -8,8 +8,40 @@
     <title>The Pretty Pizza Parlor</title>
   </head>
   <body>
+    <div class="jumbotron">
+      <h1>The Pretty Pizza Parlor</h1>
+      <p>Enjoy our pizza and stay pretty!</p>
+    </div>
     <div class="container">
-      <h1>the Pretty Pizza Parlor</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Create your account</h4>
+          <form class="account">
+            <label for="name">Please enter your name:
+              <input id="name" class="form-control" type="text" name="name" placeholde="Add name here">
+            </label>
+          </form>
+        </div>
+        <div class="col-md-4">
+          <h4>Create your pizza!</h4>
+          <form id="pizza">
+            <div class="form-group">
+              <p>Please select the type of crust you would like on your pizza.</p>
+              <input type="checkbox" name="crust" value="normal">Normal<br>
+              <input type="checkbox" name="crust" value="stuffed-crust">Stuffed Crust<br>
+              <input type="checkbox" name="crust" value="garlic">Garlic<br>
+              <input type="checkbox" name="crust" value="skinny">Skinny<br>
+            </div>
+            <div class="form-group">
+              <p>Please select the type of sauce you would like on your pizza.</p>
+              <input type="checkbox" name="sauce" value="normal">Normal<br>
+              <input type="checkbox" name="sauce" value="extra">Extra Sauce<br>
+              <input type="checkbox" name="sauce" value="none">No Sauce<br>
+              <input type="checkbox" name="sauce" value="spicy">Spicy<br>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
