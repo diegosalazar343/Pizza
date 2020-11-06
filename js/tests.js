@@ -1,5 +1,5 @@
 Describe: isPizzaParlor()
-Test: "The program"
+Test:
 Input:
 Expected-Output:
 
