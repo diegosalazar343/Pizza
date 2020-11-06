@@ -28,10 +28,38 @@ $(document).ready(function(){
     const name= $("input#name").val();
     $("#name-id").show()
     let newAccount = new Account(name);
+
+    newAccount.initialPush();
+    $(".name").text(newAccount.name);
+    $(".order").text("$" + newAccount.total + ".00");
+    $("#initialSubmit").hide();
   })
   $("form#pizza").submit(function(event){
     event.preventDefault();
 
-    let
+    $(".order").show();
+    let userPizzaOrder = [];
+    $("input:checkbox[name=crust]:checked").each(function () {
+      const crustType = $(this).val();
+      userPizzaOrder.push(crustType);
+    })
+    $("input:checkbox[name=sauce]:checked").each(function () {
+      const sauceType = $(this).val();
+      userPizzaOrder.push(sauceType);
+    })
+    $("input:checkbox[name=meat]:checked").each(function () {
+      const meatType = $(this).val();
+      userPizzaOrder.push(meatType);
+    })
+    $("input:checkbox[name=veggies]:checked").each(function () {
+      const veggiesType = $(this).val();
+      userPizzaOrder.push(veggiesType);
+    })
+    $("input:checkbox[name=size]:checked").each(function () {
+      const sizeType = $(this).val();
+      userPizzaOrder.push(sizeType);
+    })
+
+    });
   })
 })
